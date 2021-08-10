@@ -23,13 +23,13 @@ options.add_argument("--disable-infobars")
 options.add_argument("--disable-dev-shm-usage")
 driver = webdriver.Chrome(options=options)
 driver.get('https://web.whatsapp.com/')
-
-qr = False
-while not qr:
-    if 'To use WhatsApp on your computer:' in driver.page_source:
-        qr = True
-        sleep(2)
-        driver.save_screenshot('static/img.jpg')
+print('driver launched..')
+# qr = False
+# while not qr:
+#     if 'To use WhatsApp on your computer:' in driver.page_source:
+#         qr = True
+#         sleep(2)
+#         driver.save_screenshot('static/img.jpg')
 
 
 def send(phone_no, msg):
